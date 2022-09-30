@@ -1,11 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import MyListView from './components/list_view'
+import MapView from 'react-native-maps';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+       <MapView style={{height: '100%', width: '100%'}} 
+       initialRegion={{
+        latitude: 43.7186134,
+        longitude: -79.3866411,
+        latitudeDelta: 0.0922,
+        longitudeDelta: 0.0421,
+        }}
+       
+       />
+       <MyListView></MyListView>
     </View>
   );
 }
